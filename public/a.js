@@ -38,7 +38,7 @@ function DeviceMeta() {
   function getGPUName() {
     return gl
       ? gl.getParameter(
-          gl.getExtension("WEBGL_debug_renderer_info").UNMASKED_RENDERER_WEBGL
+          gl.RENDERER
         )
       : null;
   }
