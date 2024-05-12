@@ -51,15 +51,16 @@ fetch("/analyze", {
     "content-type": "application/json",
   },
   body: JSON.stringify({
+    referer: document.referer,
     meta: {
       width: window.screen.width * r,
       height: window.screen.height * r,
       ratio: r,
-      ram: n.deviceMemory ? n.deviceMemory : null,
+      ram: n.deviceMemory,
       gpu: p.getParameter(p.RENDERER),
       colorDepth: screen.colorDepth,
       gamut: getMediaColorGamut(),
-      cores: n.hardwareConcurrency || null,
+      cores: n.hardwareConcurrency,
     },
     hints: hints,
   }),
