@@ -1,0 +1,8 @@
+{
+  "name": "analytics-v2",
+  "module": "index.js",
+  "dependencies": {
+    "express": "*",
+    "node-device-detector": "*"
+  }
+}
